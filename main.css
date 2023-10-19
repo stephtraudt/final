@@ -2,6 +2,7 @@
 
 header {
   padding: 50px;
+  margin-left: 80px;
   font-style: italic;
 }
 
@@ -46,3 +47,16 @@ p {
 h2{
     margin-bottom: 30px;
 }
+.contact-container {
+    display: flex;
+    list-style: disc;
+    margin: 30px;
+
+}
+.contact{
+    display: inline-flexbox;
+    box-shadow: none;
+    padding-left: 100px;
+   
+}
+
