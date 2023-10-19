@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
+
+header {
+  padding: 50px;
+  font-style: italic;
+}
+
+body {
+  background-color: rgb(5, 238, 199);
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  color: #080404;
+}
+
+ul {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.74);
+  text-transform: capitalize;
+  list-style: none;
+}
+.pricing-container {
+    display: flex;
+    list-style: circle ;
+    margin: 30px;
+
+}
+
+a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+p {
+  padding: 100px;
+}
+ .pricing {
+    width: 200px;
+    height: 300px;
+    margin: 50px;
+
+
+}
+h2{
+    margin-bottom: 30px;
+}
