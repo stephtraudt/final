@@ -48,9 +48,10 @@ h2{
     margin-bottom: 30px;
 }
 .contact-container {
-    display: flex;
-    list-style: disc;
-    margin: 30px;
+   display: flex;
+   font: 1em sans-serif;
+   padding: 80;
+    margin: 50px;
 
 }
 .contact{
@@ -58,5 +59,12 @@ h2{
     box-shadow: none;
     padding-left: 100px;
    
+}
+textarea{
+    display: flex;
+    box-sizing: content-box;
+    padding: 50px;
+
+
 }
 
