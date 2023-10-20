@@ -63,8 +63,13 @@ h2{
 textarea{
     display: flex;
     box-sizing: content-box;
-    padding: 50px;
-
-
+    border-radius: 10px;
+    margin: 30px;
+}
+button{
+    display: flexbox;
+    background-color: blueviolet;
+    width: 100px;
+    height: 30px;
 }
 
