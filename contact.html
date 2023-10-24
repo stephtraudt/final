@@ -22,19 +22,22 @@
     <div class="contact-container">
     <h1> Send A Message </h1>
     </div>
-    <div class="contact">
-        <h5> Name  </h5>
+  <form>
+    <fieldset>
+        <form action="emailto:http://steph.traudt402@gmail.com" method="get">
+       <label><h5> Name  </h5></label>
         <input message maxlength="250"> 
-        <h5> Email </h5>
+        <label> <h5> Email </h5></label>
         <input maxlength="250">
-        <h5> Phone Number </h5>
+        <label> <h5> Phone Number </h5></label>
         <input maxlength="10">
-    </div>
-    <div class="contact-container">
-        <h3> Message  </h3>
+        <label><h3> Message</h3></label> 
         <br><br>        
     <textarea id="freeform" name="freeform" rows="4" cols="50">
  </textarea>
-     </div>
-     <button> Submit </button>
+ <button>
+    <input type="button" value="Submit">
+</button>
+    </form>
+
 </body>

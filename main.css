@@ -69,6 +69,7 @@ textarea{
 button{
     display: flexbox;
     background-color: blueviolet;
+    
     width: 100px;
     height: 30px;
 }
