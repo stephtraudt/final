@@ -1,29 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
-
-header {
-  padding: 50px;
-  margin-left: 80px;
-  font-style: italic;
+:root {
+  --active: rgb(35, 43, 38);
 }
+
 
 body {
   /* background-color: rgb(5, 238, 199); */
-  background-color: aliceblue;
+  background-color: rgb(247, 248, 248);
 }
 * {
   padding: 0px;
   margin: 0px;
   color: #080404;
 }
+header {
+  padding: 50px;
+  margin-left: 80px;
+  font-style: italic;
+}
 
 ul {
   padding: 30px 0;
   display: flex;
   justify-content: space-around;
-  background-color: rgba(0, 0, 0, 0.74);
+  background-color: rgba(238, 172, 160, 0.74);
   text-transform: capitalize;
   list-style: none;
   
+  
+}
+
+a:hover {
+color: #f7efef;
+
 }
 nav {
   width: 50%;
@@ -40,11 +49,11 @@ nav {
 }
 
 a{
-  color: rgb(255, 255, 255);
+  color: rgb(17, 16, 16);
   text-decoration: none;
 }
 p {
-  padding: 100px;
+  padding: 75px;
 }
  .pricing {
     width: 200px;
@@ -77,7 +86,7 @@ textarea{
 }
 button{
     display: flexbox;
-    background-color: blueviolet;
+    background-color: rgb(245, 136, 12);
     
     width: 100px;
     height: 100px;
@@ -161,6 +170,20 @@ user-select:all;
 @keyframes fade {
   from {opacity: .5;}
   to { opacity: 2;}
+}
+.b {
+  display:block;
+  position:absolute;
+ text-align: center;
+  padding-top: 10px;
+  font-size: 30px;
+  font-size: clamp(8px, 2.5vw, 40px);
+  height: 30px;
+}
+.img {
+  
+  margin: 40px;
+  padding-top: 10px;
 }
 
 
