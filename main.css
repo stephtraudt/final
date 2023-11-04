@@ -25,11 +25,8 @@ ul {
   justify-content: space-around;
   background-color: rgba(238, 172, 160, 0.74);
   text-transform: capitalize;
-  list-style: none;
-  
-  
+  list-style: none;  
 }
-
 a:hover {
 color: #f7efef;
 
@@ -48,7 +45,7 @@ nav {
 
 }
 
-a{
+a {
   color: rgb(17, 16, 16);
   text-decoration: none;
 }
@@ -59,8 +56,6 @@ p {
     width: 200px;
     height: 300px;
     margin: 50px;
-
-
 }
 h2{
     margin-bottom: 30px;
@@ -72,7 +67,7 @@ h2{
     margin: 50px;
 
 }
-.contact{
+.contact {
     display: inline-flexbox;
     box-shadow: none;
     padding-left: 100px;
@@ -84,43 +79,65 @@ textarea{
     border-radius: 10px;
     margin: 30px;
 }
-button{
-    display: flexbox;
-    background-color: rgb(245, 136, 12);
-    
+.input {
+    display: flexbox;   
     width: 100px;
     height: 100px;
 
 }
 .carousel {
-  position: relative;
+  position: absolute; 
+  display: flex;
   height: 300px;
-  width: 80%;
-  margin: 0 auto;
+  padding-left: 100px;
+  border: 60px;
+  margin: 20px;
 }
 
 .carsouel_box-container {
-background-color: aqua;
-height: 100%;
-position: relative;
+ position: absolute; 
+ padding: 20px;
+ height: 80%;
+ background-color: #f7efef;
+
 }
 .carsouel_box {
+  position: relative;
+  width: 60px;
+  height: 80%;
   padding: 0;
-  margin: 0;
+  margin: 10px;
   list-style: none;
 }
 .carousel_image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  justify-content: center;
+  margin: 20px;
   }
 .carousel_slide {
-position: absolute;
-top: 0;
-bottom: 0;
+ position: absolute;
+  padding: 30px;
+ width: 40%;
+
+}
+.carousel_button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+
+}
+.carousel_button--lefft {
+left: -40px;
 }
 
-
+.carousel_button--right {
+right: -40px;
+}
 
 
 
