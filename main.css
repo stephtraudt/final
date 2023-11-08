@@ -11,10 +11,25 @@ body {
   color: #080404;
 }
 header {
-  padding: 50px;
-  margin-left: 80px;
+  padding: 20px;
+  margin-left: 40px;
   font-style: italic;
+  display: flex;
 }
+
+.logo {
+ padding: 0;
+ margin: 0;
+ height: 50px;
+ width: 80px;
+}
+.child {
+  margin: 0;
+  height: 40px;
+  width: 40px;
+}
+
+
 
 ul {
   padding: 30px 0;
@@ -28,12 +43,39 @@ a:hover {
 color: #f7efef;
 
 }
+.iframe {
+display: flex;
+position:absolute;
+margin: 0;
+
+
+
+}
+.img {
+  padding-left: 40%;
+  justify-content: left;
+  display: flex;
+  position: absolute;
+  margin-top: -100px;
+
+}
 nav {
   width: 50%;
   display: block;
   position: absolute;
   right: 0%;
 }
+.about-container {
+  display: flex;
+  padding: 20px;
+}
+.about {
+  display: flex;
+  position: relative;
+  padding-left: 60%;
+  margin-top: -260px;
+}
+
 
 .pricing-container {
     display: flex;
@@ -48,6 +90,9 @@ a {
 }
 p {
   padding: 75px;
+  font-size: x-large;
+  width: 40%;
+  text-align: center;
 }
  .pricing {
     width: 200px;
@@ -82,6 +127,7 @@ textarea{
     height: 100px;
 
 }
+
 .carousel {
   position: relative; 
   height: 400px;
