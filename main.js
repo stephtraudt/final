@@ -2,6 +2,9 @@ const box = document.querySelector('.carousel_box');
 const slides = Array.from(box.children);
 const nextButton = document.querySelector('.carousel_button--right');
 const prevButton = document.querySelector('.carousel_button--left');
+const dotsNav = document.querySelector('.carousel_nav');
+const dots = Array.from(dotsNav.children);
+
 
 const slideWidth = slides[0].getBoundingClientRect().width;
 
@@ -14,21 +17,41 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 
 const setSlidePosition = (slide, index) => {
     slide.style.left = slideWidth = index + 'px';
-}
+};
 slides.forEach(setSlidePosition);
 
-// when i click left, move slides to the left
+const moveToSlide = (track, currentSlide, targetSlide) => {
+    trackEvent.style.transform = translatex(-' + targetSlide.style.1');
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
 
+};
+
+// when i click left, move slides to the left
+prevButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    const prevSlide = currentSlide.previousElementSibling;
+
+    moveToSlide(track, currentSlide, prevslide);
+});
 
 // when i click right, move slides to the right 
 nextButton.addEventListener('click',e => {
    const currentslide = box.querySelector('.current-slide');
-   const nextSlide = currentSlide.nextElementSibling;
-   const amountToMove = nextSlide.style.left;
-   //move the next slide
-   box.style.transform = 'translateX(-' + amountToMove + ')';
-   currentslide.classList.remove('current-slide');
-   nextSlide.classList.add('current-slide');
-}
+   const nextSlide = currentslide.nextElementSibling;
+  
+   moveToSlide(track, currentslide, nextSlide);
 
-)
+});
+
+dotsNav.addEventListener('click', e => {
+    const targetDot = e.target.closet('button');
+
+    if (!targetDot) return;
+
+    const currentSlide = track.querySelector('.current-slide');
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const targetIndex = dots.findIndex(dot => dot === targetDot);
+    console.log(targetIndex);
+    
+});

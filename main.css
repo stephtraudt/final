@@ -46,7 +46,8 @@ color: #f7efef;
 .iframe {
 display: flex;
 position:absolute;
-margin: 0;
+margin: 80px;
+
 
 
 
@@ -131,27 +132,31 @@ textarea{
 .carousel {
   position: relative; 
   height: 400px;
-  width: 300px;
-  margin: 0 auto;
+  width: 50%;
+  margin: 60px auto;
     
 }
 
-.carsouel_box-container {
- position: relative; 
- height: 100%;
-  
-}
-.carsouel_box {
-  padding: 0;
-  margin: 0px;
-  list-style: none;
-  transition: transform 250ms ease-in-out;
-}
 .carousel_image {
   width: 100%;
   height: 100%;
-   
-  }
+  object-fit: cover;
+ }
+
+
+.carousel_box-container {
+ position: relative; 
+ height: 100%;
+ overflow: hidden;
+  
+}
+.carousel_box {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: transform 250ms ease-in-out;
+}
+
 
 .carousel_slide {
  position: absolute;
@@ -163,7 +168,7 @@ textarea{
 .carousel_button {
   position: absolute;
   top: 50%;
-  transform: translateY(-60%);
+  transform: translateY(-50%);
   background: transparent;
   border: 0;
   margin: -50px;
@@ -175,7 +180,26 @@ left: -60%;
 }
 
 .carousel_button--right {
-right: -140px;
+right: -20px;
+}
+
+.carousel_nav {
+display: flex;
+justify-content: center;
+padding: 10px 0;
+}
+
+.carousel_indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 20px;
+  background: black;
+  margin: 0 12px;
+}
+
+.carousel_indicator.current-slide {
+  background: gray;
 }
 
 
