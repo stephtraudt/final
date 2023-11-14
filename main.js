@@ -15,33 +15,44 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 // slides[3].style.left = slidewidth = 3 + 'px';
 // slides[4].style.left = slidewidth = 4 + 'px';
 
-const setSlidePosition = (slide, index) => {
-    slide.style.left = slideWidth = index + 'px';
-};
+const setSlidePosition = ((slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
+});
+
 slides.forEach(setSlidePosition);
 
-const moveToSlide = (track, currentSlide, targetSlide) => {
+const moveToSlide = (box, currentSlide, targetSlide) => {
     trackEvent.style.transform = translatex(-' + targetSlide.style.1');
     currentSlide.classList.remove('current-slide');
     targetSlide.classList.add('current-slide');
 
 };
 
+const updateDots = (currentDot, targetDot) => {
+    currentDot.classList.remove('current-slide');
+    targetDot.classList.add('current-slide');
+}
+
 // when i click left, move slides to the left
 prevButton.addEventListener('click', e => {
-    const currentSlide = track.querySelector('.current-slide');
+    const currentSlide = box.querySelector('.current-slide');
     const prevSlide = currentSlide.previousElementSibling;
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const prevDot = currentDot.previousElementSibling;
 
-    moveToSlide(track, currentSlide, prevslide);
+    moveToSlide(box, currentSlide, prevslide);
+    updateDots(currentDot, prevDot);
 });
 
 // when i click right, move slides to the right 
 nextButton.addEventListener('click',e => {
    const currentslide = box.querySelector('.current-slide');
    const nextSlide = currentslide.nextElementSibling;
-  
-   moveToSlide(track, currentslide, nextSlide);
+   const currentDot = dotsNav.querySelector('.current-slide');
+   const nextDot = currentDot.nextElementSibling;
 
+   moveToSlide(box, currentslide, nextSlide);
+   updateDots(currentDot, nextDot);
 });
 
 dotsNav.addEventListener('click', e => {
@@ -49,9 +60,12 @@ dotsNav.addEventListener('click', e => {
 
     if (!targetDot) return;
 
-    const currentSlide = track.querySelector('.current-slide');
+    const currentSlide = box.querySelector('.current-slide');
     const currentDot = dotsNav.querySelector('.current-slide');
     const targetIndex = dots.findIndex(dot => dot === targetDot);
-    console.log(targetIndex);
+    const targetSlide = slides[targetIndex];
+
+    moveToSlide(box, currentSlide, targetSlide);
+    updateDots(currentDot, targetDot);
+    });
     
-});
