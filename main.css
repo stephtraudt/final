@@ -80,9 +80,8 @@ nav {
 
 .pricing-container {
     display: flex;
-    list-style: circle ;
+    list-style: circle;
     margin: 30px;
-
 }
 
 a {
@@ -144,17 +143,19 @@ textarea{
  }
 
 
-.carousel_box-container {
+.carousel_track-container {
  position: relative; 
  height: 100%;
  overflow: hidden;
   
 }
-.carousel_box {
+.carousel_track {
   padding: 0;
   margin: 0;
   list-style: none;
   transition: transform 250ms ease-in-out;
+  position: relative;
+  height: 100%;
 }
 
 
@@ -196,12 +197,14 @@ padding: 10px 0;
   height: 20px;
   background: black;
   margin: 0 12px;
+  cursor: pointer;
 }
 
 .carousel_indicator.current-slide {
   background: gray;
 }
 
+.is.hidden {display: none;};
 
 .film-container {
 display: flex;
